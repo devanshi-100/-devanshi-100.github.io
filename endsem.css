@@ -1,0 +1,193 @@
+/* Navbar Styles */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.89);
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#navbar h1 {
+    color: white;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 2px #000;
+    font-family: cursive;
+    margin: 0;
+}
+
+#navbar ol {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+#navbar ol li {
+    list-style: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#navbar ol li:hover,
+#navbar ol li:focus {
+    background: navy;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#navbar ol li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: Arial, sans-serif;
+}
+
+/* Hero Section Styles (Small Section) */
+/* Hero Section with Low Opacity Background */
+.hero.small-section {
+    position: relative; /* Enables positioning of the pseudo-element */
+    height: 250px; /* Adjusted height for a smaller section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: -1px; /* Prevents gap between navbar and section */
+    overflow: hidden; /* Ensures pseudo-element doesn’t overflow */
+}
+
+/* Hero Section with Black Overlay */
+.hero.small-section {
+    position: relative; /* Enables positioning of the pseudo-element */
+    height: 250px; /* Adjusted height for a smaller section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: -1px; /* Prevents gap between navbar and section */
+    overflow: hidden; /* Ensures pseudo-element doesn’t overflow */
+}
+
+.hero.small-section::before {
+    content: ""; /* Creates the overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://plus.unsplash.com/premium_photo-1679079456083-9f288e224e96?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.7); /* Makes the image darker */
+    z-index: -1; /* Places the image behind the content */
+}
+
+.hero.small-section::after {
+    content: ""; /* Creates a black overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 0; /* Places the overlay above the image but below the text */
+}
+
+.hero h1 {
+    font-size: 2.5rem; /* Medium-sized text for the heading */
+    font-family: 'Arial', sans-serif;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Enhances readability */
+    margin: 0;
+    position: relative; /* Ensures text is above the overlay */
+    z-index: 1;
+}
+
+
+
+/* Optional: Body Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section with Styled Headings */
+.hero.small-section {
+    position: relative; /* Enables positioning for pseudo-elements */
+    height: 250px; /* Adjusted height for the section */
+    display: flex;
+    flex-direction: column; /* Stacks the headings vertically */
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    text-align: center;
+    color: white;
+    margin-top: -1px; /* Prevents gap between navbar and hero section */
+    overflow: hidden; /* Ensures pseudo-elements don’t overflow */
+}
+
+.hero.small-section h1 {
+    font-size: 2.5rem; /* Main heading size */
+    font-family: 'Arial', sans-serif;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Enhances readability */
+    margin: 0; /* Removes extra margin for precise alignment */
+    position: relative; /* Stays above pseudo-elements */
+    z-index: 1;
+}
+
+.hero.small-section h3 {
+    font-size: 1.2rem; /* Slightly smaller for the secondary heading */
+    font-family: 'Arial', sans-serif;
+    margin-top: 10px; /* Adds spacing below the main heading */
+    color: rgba(255, 255, 255, 0.9); /* Slightly lighter color for distinction */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Keeps text readable on dark backgrounds */
+    position: relative; /* Ensures it stays above the overlay */
+    z-index: 1;
+}
+
+
+/* Hover Effect for Cards */
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Stacks the cards in a column on small screens */
+        align-items: center; /* Centers cards */
+    }
+
+    .card {
+        width: 80%; /* Cards will be wider on smaller screens */
+        margin-bottom: 20px; /* Adds space between stacked cards */
+    }
+}
+/* Card Container Styling */
+
+
+/* Individual Card Styling */
+
+/* Hover Effect for Cards */
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Stacks the cards vertically on small screens */
+        align-items: center; /* Centers cards */
+    }
+
+    .card {
+        width: 80%; /* Cards will be wider on smaller screens */
+        margin-bottom: 20px; /* Adds space between stacked cards */
+    }
+}
